@@ -18,12 +18,14 @@ const order = {
         house: 10,
         apartment: 20,
     },
-
+    addProduct(name) {
+        this.items.push(name);
+    },
     print() {
         console.log(`Order #${this.number} on ${this.date.toLocaleDateString()} for $${this.total}`);
         console.log("Items:", this.items.join(", "));
         console.log("Shipping to:", `${this.address.city}, ${this.address.street} ${this.address.house}, Apt. ${this.address.apartment}`);
-    }
+    },
 }
 
 order.total = 300.50; // Update total
